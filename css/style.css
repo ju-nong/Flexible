@@ -1,0 +1,14 @@
+*{margin:0 auto; padding:0; box-sizing: border-box;}
+a{all:unset}
+.active{background-color: deepskyblue;}
+
+
+body{display:flex; flex-direction: column}
+
+header{padding:20px 0px; border-bottom:2px solid #eee; width:100%; text-align: center;}
+main{margin-top:50px; border-bottom: 2px solid #eee; width:100%; height:100px}
+    main .wrap{max-width:1200px; display: flex; align-items: flex-start;}
+    main .columnContain{width:20%; padding:5px;}
+        main .columnContain .item{width:100%; border-radius: 10px; border:2px solid black; overflow: hidden; cursor:pointer; margin-bottom:10px}
+        main .columnContain .item img{display:block; width:100%}
+        main .columnContain .item span{display:block; width:100%; padding:10px 10px 20px 10px; font-size:18px; font-weight: bold; border-top:2px solid black; background-color: white;}
