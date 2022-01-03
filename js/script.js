@@ -4,6 +4,8 @@ window.onload = () => {
     const columnContains = document.getElementsByClassName("columnContain");
 
     main.addEventListener("dragover", e => {
+        e.preventDefault();
+
         main.classList.add("active");
     })
 
@@ -11,12 +13,10 @@ window.onload = () => {
         main.classList.remove("active");
     })
 
-    header.addEventListener("drop", e => {
-        console.log(1);
+    document.body.addEventListener("drop", e => {
         e.preventDefault();
 
         main.classList.remove("active");
-
         addFiles(e.dataTransfer.files);
     })
 
@@ -28,7 +28,7 @@ window.onload = () => {
                 isImg = false;	// 이미지파일이 아님
                 return;
             }
-        });
+        }); 
         
         if(isImg){	// 모두 이미지파일인 경우
             readImg(files);
